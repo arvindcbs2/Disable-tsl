@@ -2,15 +2,15 @@ Use Below line is Powershell to check
 
 Test TLS 1.0 (should FAIL)
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls
-Invoke-WebRequest https://panha.in -UseBasicParsing
+Invoke-WebRequest https://<domainname> -UseBasicParsing
 
 Test TLS 1.1 (should FAIL)
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls11
-Invoke-WebRequest https://panha.in -UseBasicParsing
+Invoke-WebRequest https://<domainname> -UseBasicParsing
 
 Test TLS 1.2 (should SUCCEED)
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest https://panha.in -UseBasicParsing
+Invoke-WebRequest https://<domainname> -UseBasicParsing
 
 ✅ Expected result
 
